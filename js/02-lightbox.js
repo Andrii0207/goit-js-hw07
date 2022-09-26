@@ -32,5 +32,8 @@ function onOpenModal(evt) {
   }
   var lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
+    captionsData: 'alt',
+    showCounter: false,
+    close: false,
   });
 }
