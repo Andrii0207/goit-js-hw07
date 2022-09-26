@@ -29,10 +29,9 @@ galleryEl.addEventListener('click', onOpenModal);
 
 function onOpenModal(evt) {
   evt.preventDefault();
-  console.log(evt);
 
   if (!evt.target.classList.contains('gallery__image')) {
-    return console.log("It's not a picture");
+    return console.log("It's not a picture, click on the picture");
   }
   const originalSizeImg = evt.target.dataset.source;
 
@@ -44,7 +43,6 @@ function onOpenModal(evt) {
   window.addEventListener('keydown', onCloseModal);
 
   function onCloseModal(evt) {
-    console.log(evt.type);
     if (evt.code === 'Escape') {
       instance.close();
     }
